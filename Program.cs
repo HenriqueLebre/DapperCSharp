@@ -15,7 +15,7 @@ class program
     private const string CONNECION_STRING = @"Server=localhost;1433;Database=Blog;User ID=sa;Password=1q2w3e4r@";
     static void Main(string[] args)
     {
-        
+
     }
 
     public static void ReadUsers()
@@ -40,13 +40,14 @@ class program
     public static void CreateUser()
     {
 
-        var user = new User(){
-            Bio="Dev",
-            Email="dev@dev.com",
-            Image="https://",
-            Name="Dev development",
-            PasswordHash="HASH",
-            Slug="Devs"
+        var user = new User()
+        {
+            Bio = "Dev",
+            Email = "dev@dev.com",
+            Image = "https://",
+            Name = "Dev development",
+            PasswordHash = "HASH",
+            Slug = "Devs"
         };
 
         using (var connection = new SqlConnection(CONNECION_STRING))
@@ -58,14 +59,15 @@ class program
     public static void UpdateUser()
     {
 
-        var user = new User(){
-            Id=1,
-            Bio="Analista",
-            Email="analista@dev.com",
-            Image="https://",
-            Name="Dev development",
-            PasswordHash="HASH",
-            Slug="Analista de sistema"
+        var user = new User()
+        {
+            Id = 1,
+            Bio = "Analista",
+            Email = "analista@dev.com",
+            Image = "https://",
+            Name = "Dev development",
+            PasswordHash = "HASH",
+            Slug = "Analista de sistema"
         };
 
         using (var connection = new SqlConnection(CONNECION_STRING))
