@@ -24,9 +24,7 @@ class program
         {
             var users = connection.GetAll<User>();
             foreach (var user in users)
-            {
                 Console.WriteLine(user.Name);
-            }
         }
     }
     public static void ReadUser()
