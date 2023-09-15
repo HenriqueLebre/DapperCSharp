@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using Blog.Models;
 using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
@@ -15,8 +16,29 @@ public class UserRepository
     public IEnumerable<User> GetAll()
         => _connection.GetAll<User>(); // Retornando com Expression Body
     public User Get(int id)
-        => _connection.Get<User>(id); // Retornando com Expression Body
+        => _connection.Get<User>(id);
     public void Create(User user)
-        => _connection.Insert<User>(user); // Retornando com Expression Body
+    {
+        user.Id = 0;
+        _connection.Insert<User>(user);
+    }
+    public void Update(User user)
+    {
+        if (user.Id != 0)
+            _connection.Update<User>(user);
+    }
+    public void Delete(User user)
+    {
+        if (user.Id != 0)
+            _connection.Delete<User>(user);
+    }
+    public void Delete(int id)
+    {
+        if(id != 0)
+            return;
+
+        var user = _connection.Get<User>(id);
+        _connection.Delete<User>(user);
+    }
 
 }
