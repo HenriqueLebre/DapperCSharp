@@ -28,7 +28,7 @@ Abra o arquivo appsettings.json e atualize a conexão com o banco de dados, se n
 
 Compile e execute o projeto.
 
-##### Exemplos
+#### Exemplos
 
 O projeto inclui exemplos de código que demonstram como:
 
@@ -38,5 +38,6 @@ Atualizar registros existentes no banco de dados.
 Excluir registros do banco de dados.
 Certifique-se de verificar os arquivos de código-fonte para obter exemplos detalhados.
 
-Contribuindo
+#### Contribuindo
+
 Sinta-se à vontade para contribuir com melhorias para este projeto. Se você encontrar problemas ou tiver sugestões, abra uma issue neste repositório.
